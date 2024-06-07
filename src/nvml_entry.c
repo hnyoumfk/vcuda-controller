@@ -41,6 +41,8 @@ nvmlReturn_t nvmlInit_v2(void) {
 }
 
 nvmlReturn_t nvmlInit(void) {
+  load_necessary_data();
+
   return NVML_ENTRY_CALL(nvml_library_entry, nvmlInit);
 }
 
